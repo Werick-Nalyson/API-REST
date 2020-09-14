@@ -106,7 +106,7 @@ app.post('/auth', (request, response) => {
 app.get('/games', auth, (request, response) => {
     return response
         .status(200)
-        .json({ user: request.loggedUser, games: DB.games });
+        .json(DB.games);
 });
 
 app.get('/games/:id', (request, response) => {
